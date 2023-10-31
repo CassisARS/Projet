@@ -31,7 +31,7 @@ class SerieController extends AbstractController
     }
 
     /**
-     * @Route("/new, name="serie_new")
+     * @Route("/new", name="serie_new")
      */
     public function new(): Response
     {

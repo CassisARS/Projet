@@ -17,14 +17,17 @@
     </head>
     <body>
 
-    {% block header %}
-        {% include'fragments/header.html.twig' %}
-    {% endblock %}
+        <div class="container">
+            {% block header %}
+                {% include'fragments/header.html.twig' %}
+            {% endblock %}
 
 
-        {% block body %}{% endblock %}
+            {% block body %}{% endblock %}
 
-        {% include 'fragments/footer.html.twig' %}
+            {% include 'fragments/footer.html.twig' %}
+        </div>
+
 
     </body>
 </html>
