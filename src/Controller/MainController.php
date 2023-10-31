@@ -21,4 +21,21 @@ class MainController extends AbstractController
     public function contact(){
         return new Response( "Page contact");
     }
+
+
+    /**
+     * @Route("/test",name="test")
+     */
+
+    public function test(){
+
+        $colors = ["rouge","bleu","rouge","violet"];
+
+        $today = new \DateTime();
+
+        return $this->render("main/test.html.twig",["colors"=>$colors,
+
+            'today'=>$today]);
+
+    }
 }
