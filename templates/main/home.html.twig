@@ -2,4 +2,13 @@
 
 {% block body %}
     <h1>Mes séries</h1>
+
+    <p>Bonjour
+        {% if app.user %}
+            {{ app.user.fullName }}
+
+        {% else %}
+            invité
+        {% endif %}
+    </p>
 {% endblock %}

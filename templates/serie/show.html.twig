@@ -7,5 +7,22 @@
     <p>{{ serie.vote }}</p>
     <p>{{ serie.overview }}</p>
 
+    <a href="{{ path('serie_delete', {'id': serie.id}) }}">Supprimer</a>
+
+    <section class="serie-seasons">
+        {% for season in serie.seasons %}
+            <article>
+               <img src="{{ asset('images/posters/seasons/' ~ season.poster) }}"  alt="{{ season.number }}">
+                <div>
+                    <h4>Saison {{ season.number }}</h4>
+                    {% if season.overview %}
+                     <p>{{ season.overview }}</p>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+
+    </section>
+
 {% endblock %}
 
